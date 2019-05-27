@@ -7,4 +7,8 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 # Changelog
 
 ## v0.3
-Implementirana kontrola za reprezentacije.
+-Implementirana kontrola za reprezentacije.
+
+-Omogućena lokalizacija.
+
+-Povezane forme.
