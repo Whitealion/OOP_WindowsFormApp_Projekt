@@ -5,4 +5,4 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 
 
 ## v0.3
-Implementirana kontrola za reprezentacije. 
+Implementirana kontrola za reprezentacije.
