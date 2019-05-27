@@ -4,5 +4,7 @@ Prvi dio projektnog rada za OOP.net.
 Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 
 
+# Changelog
+
 ## v0.3
 Implementirana kontrola za reprezentacije.
