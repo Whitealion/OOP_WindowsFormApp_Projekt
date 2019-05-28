@@ -6,6 +6,11 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 
 # Changelog
 
+## v0.32
+- Kontrola za reprezentacije radi asinkrono.
+
+- Popravljeno prvo pokretanje aplikacije da se inicijalizira sa odabranim jezikom.
+
 ## v0.3
 -Implementirana kontrola za reprezentacije.
 
