@@ -12,8 +12,8 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 - Popravljeno prvo pokretanje aplikacije da se inicijalizira sa odabranim jezikom.
 
 ## v0.3
--Implementirana kontrola za reprezentacije.
+- Implementirana kontrola za reprezentacije.
 
--Omogućena lokalizacija.
+- Omogućena lokalizacija.
 
--Povezane forme.
+- Povezane forme.
