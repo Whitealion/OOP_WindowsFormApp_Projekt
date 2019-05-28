@@ -19,7 +19,8 @@ namespace OOPWindowsFormsApp
 {
     public partial class MainForm : Form
     {
-        private const string TEAMS_PATH = @"data\team.json";
+        //obsolete
+        //private const string TEAMS_PATH = @"data\team.json";
         private const string FAVOURITE_TEAMS_PATH = "data\\favouriteTeam.txt";
         private Klasice.Data.Language language;
         private Klasice.Data.Team tim = null;
@@ -48,10 +49,11 @@ namespace OOPWindowsFormsApp
 
             Icon = Properties.Resources.IkonaOdSrednje;
 
-            Task<List<Klasice.Data.Team>> teams = Klasice.Utilities.GetTeamsAsync(client);
-            List<Klasice.Data.Team> timovi = Klasice.Utilities.GetTeams(TEAMS_PATH);
+            //obsolete
+            //Task<List<Klasice.Data.Team>> teams = Klasice.Utilities.GetTeamsAsync(client);
+            //List<Klasice.Data.Team> timovi = Klasice.Utilities.GetTeams(TEAMS_PATH);
 
-            teamsComboBox.DataSource = timovi;
+            teamsComboBox.DataSource = Klasice.Utilities.GetTeamsAsync(client).Result;
             teamsComboBox.DisplayMember = "FormattedName";
         }
 

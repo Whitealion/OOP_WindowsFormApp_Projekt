@@ -36,7 +36,7 @@ namespace OOPWindowsFormsApp
             File.WriteAllText(LANGUAGE_PATH, Klasice.Data.Language.English.ToString());
 
             Hide();
-            StartMainForm();
+            StartMainForm(Klasice.Data.Language.English);
             Close();
         }
 
@@ -45,19 +45,19 @@ namespace OOPWindowsFormsApp
             File.WriteAllText(LANGUAGE_PATH, Klasice.Data.Language.Hrvatski.ToString());
 
             Hide();
-            StartMainForm();
+            StartMainForm(Klasice.Data.Language.Hrvatski);
             Close();
         }
 
-        private void StartMainForm()
+        private void StartMainForm(Klasice.Data.Language language)
         {
             if (team != null)
             {
-                new MainForm(Klasice.Data.Language.English, team, client).ShowDialog();
+                new MainForm(language, team, client).ShowDialog();
             }
             else
             {
-                new MainForm(Klasice.Data.Language.Hrvatski, client).ShowDialog();
+                new MainForm(language, client).ShowDialog();
             }
         }
 
