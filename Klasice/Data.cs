@@ -36,7 +36,7 @@ namespace Klasice
                 return (IEnumerator)this;
             }
 
-            public override string ToString()
+            public string FormatForFile()
             {
                 return $"{Id}|{Country}|{Alternate_Name}|{Fifa_Code}|{Group_Id}|{Group_Letter}";
             }

@@ -79,7 +79,7 @@ namespace Klasice
                 throw new CorruptedFileException("Favourite team file is corrupted.");
             }
 
-            if (!char.IsLetter(s[5][0]))
+            if (!char.IsLetter(s[5][0]) && s[5].Length != 1)
             {
                 throw new CorruptedFileException("Favourite team file is corrupted.");
             }
@@ -95,11 +95,6 @@ namespace Klasice
                 Group_Id = s[4],
                 Group_Letter = s[5]
             };
-        }
-        
-        public static List<Team> GetTeams(string path)
-        {
-            return new JavaScriptSerializer().Deserialize<List<Team>>(File.ReadAllText(path));
         }
 
         public static Language GetLanguage(string path)
@@ -117,15 +112,25 @@ namespace Klasice
             }
         }
 
+        //obsolete
+        //public static List<Team> GetTeams(string path)
+        //{
+        //    return new JavaScriptSerializer().Deserialize<List<Team>>(File.ReadAllText(path));
+        //}
+
         public async static Task<List<Team>> GetTeamsAsync(HttpClient client)
         {
-            var request = await client.GetAsync(TEAMS_URL);
-            return new JavaScriptSerializer().Deserialize<List<Team>>(await request.Content.ReadAsStringAsync());
+            //popravljeno
+            using (client)
+            {
+                var request = await client.GetAsync(TEAMS_URL).ConfigureAwait(false);
+                return new JavaScriptSerializer().Deserialize<List<Team>>(await request.Content.ReadAsStringAsync().ConfigureAwait(false)); 
+            }
         }
 
         public static void SaveFavouriteTeam(string path, Team tim)
         {
-            File.WriteAllText(path, tim.ToString());
+            File.WriteAllText(path, tim.FormatForFile());
         }
     }
 }
