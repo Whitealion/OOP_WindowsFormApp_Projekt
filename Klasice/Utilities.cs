@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -14,6 +15,8 @@ namespace Klasice
     public static class Utilities
     {
         private const string TEAMS_URL = "https://worldcup.sfg.io/teams/";
+        private const string MATCHES_URL = "https://worldcup.sfg.io/matches";
+        private const string BY_COUNTRY = "/country?fifa_code=";
 
         public static void CenterControl(Control control)
         {
@@ -97,6 +100,20 @@ namespace Klasice
             };
         }
 
+        public static Control NewPlayerControl(Player player, int max)
+        {
+            int i = 0;
+            Panel _playerPanel = new Panel();
+            _playerPanel.Location = new Point(_playerPanel.Parent.Parent.Width/2, _playerPanel.Parent.Parent.Height / 2);
+            _playerPanel.Name = "-";
+            _playerPanel.Size = new Size(_playerPanel.Parent.Width - 2, 30);
+            _playerPanel.TabIndex = i;
+            _playerPanel.BackColor = Color.LightBlue;
+            _playerPanel.Show();
+
+            return _playerPanel;
+        }
+
         public static Language GetLanguage(string path)
         {
             switch (File.ReadAllText(path).ToLower())
@@ -121,10 +138,40 @@ namespace Klasice
         public async static Task<List<Team>> GetTeamsAsync(HttpClient client)
         {
             //popravljeno
-            using (client)
+            var request = await client.GetAsync(TEAMS_URL).ConfigureAwait(false);
+            return new JavaScriptSerializer().Deserialize<List<Team>>(await request.Content.ReadAsStringAsync().ConfigureAwait(false));
+        }
+
+        public async static Task<List<Match>> GetMatchesByFifaCode(HttpClient client, Team team)
+        {
+            var request = await client.GetAsync($"{MATCHES_URL}{BY_COUNTRY}{team.Fifa_Code}").ConfigureAwait(false);
+            return new JavaScriptSerializer().Deserialize<List<Match>>(await request.Content.ReadAsStringAsync().ConfigureAwait(false));
+        }
+
+        public static List<Player> GetPlayers(Match match, Team team)
+        {
+            List<Player> players = new List<Player>();
+
+            if (match.Home_Team.Code == team.Fifa_Code)
             {
-                var request = await client.GetAsync(TEAMS_URL).ConfigureAwait(false);
-                return new JavaScriptSerializer().Deserialize<List<Team>>(await request.Content.ReadAsStringAsync().ConfigureAwait(false)); 
+                players.AddRange(match.Home_Team_Statistics.Starting_Eleven);
+                players.AddRange(match.Home_Team_Statistics.Substitutes);
+            }
+            else
+            {
+                players.AddRange(match.Away_Team_Statistics.Starting_Eleven);
+                players.AddRange(match.Away_Team_Statistics.Substitutes);
+            }
+
+            return players;
+        }
+
+        public static void SavePlayersOfSelectedTeam(string path, List<Player> players)
+        {
+            File.WriteAllText(path, "");
+            foreach (var player in players)
+            {
+                File.AppendAllText(path, player.FormatForFile() + "\n");
             }
         }
 
