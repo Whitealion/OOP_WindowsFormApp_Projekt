@@ -6,6 +6,9 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 
 # Changelog
 
+## v0.4
+-  Implementirana kontrola za igrače
+
 ## v0.32
 - Kontrola za reprezentacije radi asinkrono.
 
