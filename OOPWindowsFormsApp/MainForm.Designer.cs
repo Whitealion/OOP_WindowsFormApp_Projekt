@@ -45,9 +45,10 @@
             // 
             // teamsComboBox
             // 
-            resources.ApplyResources(this.teamsComboBox, "teamsComboBox");
             this.teamsComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.teamsComboBox, "teamsComboBox");
             this.teamsComboBox.Name = "teamsComboBox";
+            this.teamsComboBox.SelectedIndexChanged += new System.EventHandler(this.TeamsComboBox_SelectedIndexChanged);
             // 
             // confirmFavouriteTeamButton
             // 
@@ -58,20 +59,22 @@
             // 
             // teamsGroupBox
             // 
-            resources.ApplyResources(this.teamsGroupBox, "teamsGroupBox");
             this.teamsGroupBox.Controls.Add(this.confirmFavouriteTeamButton);
             this.teamsGroupBox.Controls.Add(this.teamsComboBox);
+            resources.ApplyResources(this.teamsGroupBox, "teamsGroupBox");
             this.teamsGroupBox.Name = "teamsGroupBox";
             this.teamsGroupBox.TabStop = false;
             // 
             // igracPictureBox
             // 
+            this.igracPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.igracPictureBox, "igracPictureBox");
             this.igracPictureBox.Name = "igracPictureBox";
             this.igracPictureBox.TabStop = false;
             // 
             // omiljeniIgraciPanel
             // 
+            this.omiljeniIgraciPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.omiljeniIgraciPanel, "omiljeniIgraciPanel");
             this.omiljeniIgraciPanel.Name = "omiljeniIgraciPanel";
             // 
@@ -82,7 +85,9 @@
             // 
             // igracPanel
             // 
+            this.igracPanel.AllowDrop = true;
             resources.ApplyResources(this.igracPanel, "igracPanel");
+            this.igracPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.igracPanel.Name = "igracPanel";
             // 
             // igraciLabel

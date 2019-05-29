@@ -22,28 +22,31 @@ namespace OOPWindowsFormsApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (Klasice.Utilities.IfLanguageSettingExists(LANGUAGE_PATH))
+            using (client)
             {
-                try
+                if (Klasice.Utilities.IfLanguageSettingExists(LANGUAGE_PATH))
                 {
-                    if (Klasice.Utilities.IfFavouriteTeamExists(FAVOURITE_TEAMS_PATH))
+                    try
                     {
-                        Application.Run(new MainForm(Klasice.Utilities.GetLanguage(LANGUAGE_PATH), Klasice.Utilities.GetFavouriteTeam(FAVOURITE_TEAMS_PATH), client));
+                        if (Klasice.Utilities.IfFavouriteTeamExists(FAVOURITE_TEAMS_PATH))
+                        {
+                            Application.Run(new MainForm(Klasice.Utilities.GetLanguage(LANGUAGE_PATH), Klasice.Utilities.GetFavouriteTeam(FAVOURITE_TEAMS_PATH), client));
+                        }
+                        else
+                        {
+                            Application.Run(new MainForm(Klasice.Utilities.GetLanguage(LANGUAGE_PATH), client));
+                        }
                     }
-                    else
+                    catch (Exception e)
                     {
-                        Application.Run(new MainForm(Klasice.Utilities.GetLanguage(LANGUAGE_PATH), client));
+                        MessageBox.Show($"{e.Message}\nStarting language form.");
+                        Application.Run(new LanguageForm(client));
                     }
                 }
-                catch (Exception e)
+                else
                 {
-                    MessageBox.Show($"{e.Message}\nStarting language form.");
                     Application.Run(new LanguageForm(client));
                 }
-            }
-            else
-            {
-                Application.Run(new LanguageForm(client));
             }
         }
     }

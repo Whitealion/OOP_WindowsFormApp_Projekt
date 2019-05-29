@@ -96,7 +96,7 @@
             this.Controls.Add(this.menuGroupBox);
             this.MaximizeBox = false;
             this.Name = "LanguageForm";
-            this.Text = "絶望 Nogomet";
+            this.Text = "Nogomet";
             this.Load += new System.EventHandler(this.LanguageForm_Load);
             this.menuGroupBox.ResumeLayout(false);
             this.menuGroupBox.PerformLayout();
