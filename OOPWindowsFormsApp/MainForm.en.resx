@@ -120,6 +120,9 @@
   <data name="confirmFavouriteTeamButton.Text" xml:space="preserve">
     <value>Confirm favourite team</value>
   </data>
+  <data name="showMatchesButton.Text" xml:space="preserve">
+    <value>Show played matches</value>
+  </data>
   <data name="teamsGroupBox.Text" xml:space="preserve">
     <value>Favourite team</value>
   </data>

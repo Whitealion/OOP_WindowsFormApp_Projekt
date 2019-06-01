@@ -32,6 +32,7 @@
             this.teamsComboBox = new System.Windows.Forms.ComboBox();
             this.confirmFavouriteTeamButton = new System.Windows.Forms.Button();
             this.teamsGroupBox = new System.Windows.Forms.GroupBox();
+            this.showMatchesButton = new System.Windows.Forms.Button();
             this.igracPictureBox = new System.Windows.Forms.PictureBox();
             this.omiljeniIgraciPanel = new System.Windows.Forms.Panel();
             this.omiljeniIgraciLabel = new System.Windows.Forms.Label();
@@ -45,8 +46,8 @@
             // 
             // teamsComboBox
             // 
-            this.teamsComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.teamsComboBox, "teamsComboBox");
+            this.teamsComboBox.FormattingEnabled = true;
             this.teamsComboBox.Name = "teamsComboBox";
             this.teamsComboBox.SelectedIndexChanged += new System.EventHandler(this.TeamsComboBox_SelectedIndexChanged);
             // 
@@ -59,23 +60,31 @@
             // 
             // teamsGroupBox
             // 
+            resources.ApplyResources(this.teamsGroupBox, "teamsGroupBox");
+            this.teamsGroupBox.Controls.Add(this.showMatchesButton);
             this.teamsGroupBox.Controls.Add(this.confirmFavouriteTeamButton);
             this.teamsGroupBox.Controls.Add(this.teamsComboBox);
-            resources.ApplyResources(this.teamsGroupBox, "teamsGroupBox");
             this.teamsGroupBox.Name = "teamsGroupBox";
             this.teamsGroupBox.TabStop = false;
             // 
+            // showMatchesButton
+            // 
+            resources.ApplyResources(this.showMatchesButton, "showMatchesButton");
+            this.showMatchesButton.Name = "showMatchesButton";
+            this.showMatchesButton.UseVisualStyleBackColor = true;
+            // 
             // igracPictureBox
             // 
-            this.igracPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.igracPictureBox, "igracPictureBox");
+            this.igracPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.igracPictureBox.Name = "igracPictureBox";
             this.igracPictureBox.TabStop = false;
             // 
             // omiljeniIgraciPanel
             // 
-            this.omiljeniIgraciPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.omiljeniIgraciPanel, "omiljeniIgraciPanel");
+            this.omiljeniIgraciPanel.AllowDrop = true;
+            this.omiljeniIgraciPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.omiljeniIgraciPanel.Name = "omiljeniIgraciPanel";
             // 
             // omiljeniIgraciLabel
@@ -85,8 +94,8 @@
             // 
             // igracPanel
             // 
-            this.igracPanel.AllowDrop = true;
             resources.ApplyResources(this.igracPanel, "igracPanel");
+            this.igracPanel.AllowDrop = true;
             this.igracPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.igracPanel.Name = "igracPanel";
             // 
@@ -142,6 +151,7 @@
         private System.Windows.Forms.Label igraciLabel;
         private System.Windows.Forms.Button prikazIgracaButton;
         private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Button showMatchesButton;
     }
 }
 
