@@ -6,8 +6,17 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 
 # Changelog
 
+## v0.46
+- Implementirana kontrola za omiljene igrače.
+
+- Povezane kontrole za igrače i omiljene igrače.
+
+- Omogućeno spremanje omiljenih igrača i usporedba s aktivnom listom igrača.
+
+- Bug: ako se spremi omiljeni igrač i promjeni tim moguće je vratiti igrača natrag u krivi tim.
+
 ## v0.4
--  Implementirana kontrola za igrače
+-  Implementirana kontrola za igrače.
 
 ## v0.32
 - Kontrola za reprezentacije radi asinkrono.
