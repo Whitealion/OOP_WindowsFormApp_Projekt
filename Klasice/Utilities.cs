@@ -64,6 +64,26 @@ namespace Klasice
             return true;
         }
 
+        public static bool IfFavouritePlayersExists(string path)
+        {
+            if (!Directory.Exists("data"))
+            {
+                Directory.CreateDirectory("data");
+            }
+
+            if (File.Exists(path) && string.IsNullOrWhiteSpace(File.ReadAllText(path)))
+            {
+                return false;
+            }
+
+            if (!File.Exists(path))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public static Team GetFavouriteTeam(string path)
         {
             string[] s = File.ReadAllText(path).Split('|');
