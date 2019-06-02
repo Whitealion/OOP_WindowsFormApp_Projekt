@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Web.Script.Serialization;
+using System.Drawing;
 
 namespace Klasice
 {
@@ -44,9 +45,8 @@ namespace Klasice
         {
             public string Name { get; set; }
             public bool Captain { get; set; }
-            public string Shirt_Number { get; set; }
+            public int Shirt_Number { get; set; }
             public string Position { get; set; }
-            public bool Favourite { get; set; }
 
             public string FormatForFile()
             {
@@ -55,8 +55,7 @@ namespace Klasice
 
             public override string ToString()
             {
-                return $"{Name} | {Shirt_Number} | {Position}\n" +
-                    $"Captain: {Captain.ToString()}";
+                return $"{Name} | {Shirt_Number}";
             }
 
             public IEnumerator GetEnumerator()
@@ -140,24 +139,6 @@ namespace Klasice
             public TeamStatistics Home_Team_Statistics { get; set; }
             public TeamStatistics Away_Team_Statistics { get; set; }
         }
-        
-        //public class Player : IPlayer
-        //{
-        //    public string Name { get; set; }
-        //    public bool Captain { get; set; }
-        //    public string Shirt_Number { get; set; }
-        //    public string Position { get; set; }
-
-        //    public IEnumerator GetEnumerator()
-        //    {
-        //        return (IEnumerator)this;
-        //    }
-
-        //    public string FormatForFile()
-        //    {
-        //        return $"{Name}|{Captain}|{Shirt_Number}|{Position}";
-        //    }
-        //}
 
     }
 }

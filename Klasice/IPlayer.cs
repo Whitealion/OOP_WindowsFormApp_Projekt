@@ -17,10 +17,7 @@ namespace Klasice
     {
         string Name { get; set; }
         bool Captain { get; set; }
-        string Shirt_Number { get; set; }
+        int Shirt_Number { get; set; }
         string Position { get; set; }
-        bool Favourite { get; set; }
-
-        string FormatForFile();
     }
 }
