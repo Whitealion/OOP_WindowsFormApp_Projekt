@@ -98,7 +98,7 @@
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "LanguageForm";
-            this.Text = "Nogomet";
+            this.Text = "Nogomet - Language";
             this.Load += new System.EventHandler(this.LanguageForm_Load);
             this.menuGroupBox.ResumeLayout(false);
             this.menuGroupBox.PerformLayout();

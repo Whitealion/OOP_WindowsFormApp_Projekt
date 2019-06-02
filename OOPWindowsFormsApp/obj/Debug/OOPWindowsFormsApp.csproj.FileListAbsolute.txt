@@ -19,3 +19,4 @@ C:\Users\Whitealion\source\repos\OOPWindowsFormsApp\OOPWindowsFormsApp\obj\Debug
 C:\Users\Whitealion\source\repos\OOPWindowsFormsApp\OOPWindowsFormsApp\obj\Debug\hr\OOPWindowsFormsApp.resources.dll
 C:\Users\Whitealion\source\repos\OOPWindowsFormsApp\OOPWindowsFormsApp\obj\Debug\OOPWindowsFormsApp.LanguageForm.resources
 C:\Users\Whitealion\source\repos\OOPWindowsFormsApp\OOPWindowsFormsApp\obj\Debug\OOPWindowsFormsApp.SettingsForm.resources
+C:\Users\Whitealion\source\repos\OOPWindowsFormsApp\OOPWindowsFormsApp\obj\Debug\OOPWindowsFormsApp.SettingsForm.en.resources

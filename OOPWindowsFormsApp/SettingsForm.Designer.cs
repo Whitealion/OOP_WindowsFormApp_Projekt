@@ -1,4 +1,7 @@
-﻿namespace OOPWindowsFormsApp
+﻿using System;
+using System.Windows.Forms;
+
+namespace OOPWindowsFormsApp
 {
     partial class SettingsForm
     {
@@ -29,20 +32,67 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.resetFavouritePlayersButton = new System.Windows.Forms.Button();
+            this.resetFavouriteTeamButton = new System.Windows.Forms.Button();
+            this.changeLanguageButton = new System.Windows.Forms.Button();
+            this.languageComboBox = new System.Windows.Forms.ComboBox();
+            this.confirmButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // resetFavouritePlayersButton
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            resources.ApplyResources(this.resetFavouritePlayersButton, "resetFavouritePlayersButton");
+            this.resetFavouritePlayersButton.Name = "resetFavouritePlayersButton";
+            this.resetFavouritePlayersButton.UseVisualStyleBackColor = true;
+            this.resetFavouritePlayersButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ResetFavouritePlayersButton_KeyPress);
+            // 
+            // resetFavouriteTeamButton
+            // 
+            resources.ApplyResources(this.resetFavouriteTeamButton, "resetFavouriteTeamButton");
+            this.resetFavouriteTeamButton.Name = "resetFavouriteTeamButton";
+            this.resetFavouriteTeamButton.UseVisualStyleBackColor = true;
+            this.resetFavouriteTeamButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ResetFavouriteTeamButton_KeyPress);
+            // 
+            // changeLanguageButton
+            // 
+            resources.ApplyResources(this.changeLanguageButton, "changeLanguageButton");
+            this.changeLanguageButton.Name = "changeLanguageButton";
+            this.changeLanguageButton.UseVisualStyleBackColor = true;
+            this.changeLanguageButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChangeLanguageButton_KeyPress);
+            // 
+            // languageComboBox
+            // 
+            resources.ApplyResources(this.languageComboBox, "languageComboBox");
+            this.languageComboBox.FormattingEnabled = true;
+            this.languageComboBox.Name = "languageComboBox";
+            this.languageComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LanguageComboBox_KeyPress);
+            // 
+            // confirmButton
+            // 
+            resources.ApplyResources(this.confirmButton, "confirmButton");
+            this.confirmButton.Name = "confirmButton";
+            this.confirmButton.UseVisualStyleBackColor = true;
+            this.confirmButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConfirmButton_KeyPress);
+            // 
+            // cancelButton
+            // 
+            resources.ApplyResources(this.cancelButton, "cancelButton");
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CancelButton_KeyPress);
             // 
             // SettingsForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.confirmButton);
+            this.Controls.Add(this.resetFavouritePlayersButton);
+            this.Controls.Add(this.resetFavouriteTeamButton);
+            this.Controls.Add(this.languageComboBox);
+            this.Controls.Add(this.changeLanguageButton);
+            this.MaximizeBox = false;
             this.Name = "SettingsForm";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.ResumeLayout(false);
@@ -50,7 +100,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button resetFavouritePlayersButton;
+        private System.Windows.Forms.Button resetFavouriteTeamButton;
+        private System.Windows.Forms.Button changeLanguageButton;
+        private System.Windows.Forms.ComboBox languageComboBox;
+        private System.Windows.Forms.Button confirmButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

@@ -118,309 +118,279 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="showMatchesButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 58</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="showMatchesButton.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="settingsButton.Text" xml:space="preserve">
-    <value>Postavke</value>
-  </data>
-  <data name="omiljeniIgraciPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="teamsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 78</value>
-  </data>
-  <data name="&gt;&gt;igraciLabel.Name" xml:space="preserve">
-    <value>igraciLabel</value>
-  </data>
-  <data name="igraciLabel.Text" xml:space="preserve">
-    <value>Igrači</value>
-  </data>
-  <data name="&gt;&gt;showMatchesButton.Parent" xml:space="preserve">
-    <value>teamsGroupBox</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>816, 489</value>
-  </data>
-  <data name="&gt;&gt;teamsGroupBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="omiljeniIgraciLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="&gt;&gt;showMatchesButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;omiljeniIgraciLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="prikazIgracaButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
-  </data>
-  <data name="&gt;&gt;teamsGroupBox.Name" xml:space="preserve">
-    <value>teamsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;teamsComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
-    <value>settingsButton</value>
-  </data>
-  <data name="prikazIgracaButton.Text" xml:space="preserve">
-    <value>Prikaži igrača</value>
-  </data>
-  <data name="igracPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 78</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="igracPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="&gt;&gt;igracPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;igraciLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="confirmFavouriteTeamButton.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="prikazIgracaButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 50</value>
-  </data>
-  <data name="&gt;&gt;omiljeniIgraciLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="igraciLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 62</value>
+  <data name="teamsComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
   </data>
   <data name="teamsComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 21</value>
   </data>
-  <data name="omiljeniIgraciLabel.Text" xml:space="preserve">
-    <value>Omiljeni igrači</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="teamsComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;teamsComboBox.Name" xml:space="preserve">
+    <value>teamsComboBox</value>
+  </data>
+  <data name="&gt;&gt;teamsComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;teamsComboBox.Parent" xml:space="preserve">
+    <value>teamsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;teamsComboBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="confirmFavouriteTeamButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="confirmFavouriteTeamButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>47, 48</value>
+  </data>
+  <data name="confirmFavouriteTeamButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 50</value>
+  </data>
+  <data name="confirmFavouriteTeamButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="confirmFavouriteTeamButton.Text" xml:space="preserve">
+    <value>Potvrdi omiljenu reprezentaciju</value>
+  </data>
+  <data name="&gt;&gt;confirmFavouriteTeamButton.Name" xml:space="preserve">
+    <value>confirmFavouriteTeamButton</value>
+  </data>
+  <data name="&gt;&gt;confirmFavouriteTeamButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;confirmFavouriteTeamButton.Parent" xml:space="preserve">
+    <value>teamsGroupBox</value>
+  </data>
+  <data name="&gt;&gt;confirmFavouriteTeamButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="teamsGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 36</value>
+  </data>
+  <data name="teamsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 110</value>
+  </data>
+  <data name="teamsGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="teamsGroupBox.Text" xml:space="preserve">
+    <value>Reprezentacije</value>
+  </data>
+  <data name="&gt;&gt;teamsGroupBox.Name" xml:space="preserve">
+    <value>teamsGroupBox</value>
   </data>
   <data name="&gt;&gt;teamsGroupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;igracPictureBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;teamsGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;teamsGroupBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="showMatchesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 253</value>
+  </data>
+  <data name="showMatchesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 50</value>
+  </data>
+  <data name="showMatchesButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="showMatchesButton.Text" xml:space="preserve">
+    <value>Prikaži odigrane utakmice</value>
+  </data>
+  <data name="&gt;&gt;showMatchesButton.Name" xml:space="preserve">
+    <value>showMatchesButton</value>
+  </data>
+  <data name="&gt;&gt;showMatchesButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showMatchesButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;showMatchesButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="omiljeniIgraciPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 219</value>
+  </data>
+  <data name="omiljeniIgraciPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 152</value>
+  </data>
+  <data name="omiljeniIgraciPanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="&gt;&gt;omiljeniIgraciPanel.Name" xml:space="preserve">
     <value>omiljeniIgraciPanel</value>
   </data>
-  <data name="igracPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="igraciLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="teamsGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="showMatchesButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 46</value>
-  </data>
-  <data name="&gt;&gt;igraciLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="igracPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;prikazIgracaButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="igracPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 78</value>
+  <data name="&gt;&gt;omiljeniIgraciPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;omiljeniIgraciPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="igracPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 154</value>
-  </data>
   <data name="&gt;&gt;omiljeniIgraciPanel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="teamsComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="&gt;&gt;teamsComboBox.Parent" xml:space="preserve">
-    <value>teamsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;showMatchesButton.Name" xml:space="preserve">
-    <value>showMatchesButton</value>
-  </data>
-  <data name="&gt;&gt;confirmFavouriteTeamButton.Name" xml:space="preserve">
-    <value>confirmFavouriteTeamButton</value>
-  </data>
-  <data name="&gt;&gt;igracPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;prikazIgracaButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="igracPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 293</value>
-  </data>
-  <data name="settingsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>713, 415</value>
-  </data>
-  <data name="igracPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;prikazIgracaButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;teamsGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;igracPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="showMatchesButton.Text" xml:space="preserve">
-    <value>Prikaži odigrane utakmice</value>
-  </data>
-  <data name="confirmFavouriteTeamButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 58</value>
-  </data>
-  <data name="igraciLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>816, 489</value>
-  </data>
-  <data name="&gt;&gt;omiljeniIgraciLabel.Name" xml:space="preserve">
-    <value>omiljeniIgraciLabel</value>
-  </data>
-  <data name="&gt;&gt;confirmFavouriteTeamButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="omiljeniIgraciLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 204</value>
-  </data>
-  <data name="teamsGroupBox.Text" xml:space="preserve">
-    <value>Omiljena reprezentacija</value>
-  </data>
-  <data name="&gt;&gt;settingsButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="igraciLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 13</value>
-  </data>
-  <data name="&gt;&gt;confirmFavouriteTeamButton.Parent" xml:space="preserve">
-    <value>teamsGroupBox</value>
-  </data>
-  <data name="&gt;&gt;prikazIgracaButton.Name" xml:space="preserve">
-    <value>prikazIgracaButton</value>
-  </data>
-  <data name="&gt;&gt;omiljeniIgraciPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="teamsGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 110</value>
-  </data>
-  <data name="prikazIgracaButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>577, 321</value>
-  </data>
-  <data name="&gt;&gt;omiljeniIgraciLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="teamsComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="settingsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Nogomet</value>
-  </data>
-  <data name="confirmFavouriteTeamButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 46</value>
+    <value>6</value>
   </data>
   <data name="omiljeniIgraciLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;teamsComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="omiljeniIgraciLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 204</value>
   </data>
-  <data name="&gt;&gt;igracPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="omiljeniIgraciLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
   </data>
   <data name="omiljeniIgraciLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;showMatchesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="omiljeniIgraciLabel.Text" xml:space="preserve">
+    <value>Omiljeni igrači</value>
   </data>
-  <data name="omiljeniIgraciPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 220</value>
+  <data name="&gt;&gt;omiljeniIgraciLabel.Name" xml:space="preserve">
+    <value>omiljeniIgraciLabel</value>
   </data>
-  <data name="&gt;&gt;igracPictureBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;omiljeniIgraciLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;omiljeniIgraciLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;igraciLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;omiljeniIgraciLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;teamsComboBox.Name" xml:space="preserve">
-    <value>teamsComboBox</value>
+  <data name="igracPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="igracPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>481, 36</value>
   </data>
-  <data name="&gt;&gt;confirmFavouriteTeamButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="igracPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 152</value>
+  </data>
+  <data name="igracPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;igracPanel.Name" xml:space="preserve">
     <value>igracPanel</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 450</value>
+  <data name="&gt;&gt;igracPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="omiljeniIgraciPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 151</value>
+  <data name="&gt;&gt;igracPanel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;igracPanel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="confirmFavouriteTeamButton.Text" xml:space="preserve">
-    <value>Potvrdi omiljenu reprezentaciju</value>
+  <data name="igraciLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="igraciLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="confirmFavouriteTeamButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="igraciLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 20</value>
+  </data>
+  <data name="igraciLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 13</value>
+  </data>
+  <data name="igraciLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="igraciLabel.Text" xml:space="preserve">
+    <value>Igrači</value>
+  </data>
+  <data name="&gt;&gt;igraciLabel.Name" xml:space="preserve">
+    <value>igraciLabel</value>
+  </data>
+  <data name="&gt;&gt;igraciLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;igraciLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;igraciLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="prikazIgracaButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 185</value>
+  </data>
+  <data name="prikazIgracaButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 50</value>
+  </data>
+  <data name="prikazIgracaButton.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="prikazIgracaButton.Text" xml:space="preserve">
+    <value>Prikaži detalje o igračima</value>
+  </data>
+  <data name="&gt;&gt;prikazIgracaButton.Name" xml:space="preserve">
+    <value>prikazIgracaButton</value>
+  </data>
+  <data name="&gt;&gt;prikazIgracaButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;prikazIgracaButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;prikazIgracaButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="settingsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 321</value>
+  </data>
+  <data name="settingsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 50</value>
+  </data>
+  <data name="settingsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="settingsButton.Text" xml:space="preserve">
+    <value>Postavke</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Name" xml:space="preserve">
+    <value>settingsButton</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;settingsButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;settingsButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="igracPictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;igracPictureBox.Name" xml:space="preserve">
-    <value>igracPictureBox</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 450</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>816, 489</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>816, 489</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Nogomet</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

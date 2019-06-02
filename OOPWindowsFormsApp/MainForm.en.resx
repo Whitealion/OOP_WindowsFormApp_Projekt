@@ -120,11 +120,11 @@
   <data name="confirmFavouriteTeamButton.Text" xml:space="preserve">
     <value>Confirm favourite team</value>
   </data>
+  <data name="teamsGroupBox.Text" xml:space="preserve">
+    <value>Teams</value>
+  </data>
   <data name="showMatchesButton.Text" xml:space="preserve">
     <value>Show played matches</value>
-  </data>
-  <data name="teamsGroupBox.Text" xml:space="preserve">
-    <value>Favourite team</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="omiljeniIgraciLabel.Size" type="System.Drawing.Size, System.Drawing">
@@ -140,7 +140,7 @@
     <value>Players</value>
   </data>
   <data name="prikazIgracaButton.Text" xml:space="preserve">
-    <value>Show player</value>
+    <value>Show player information</value>
   </data>
   <data name="settingsButton.Text" xml:space="preserve">
     <value>Settings</value>

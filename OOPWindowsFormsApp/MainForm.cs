@@ -22,12 +22,13 @@ namespace OOPWindowsFormsApp
     {
         //obsolete
         //private const string TEAMS_PATH = @"data\team.json";
-        private const string FAVOURITE_TEAM_PATH = "data\\favouriteTeam.txt";
-        private const string FAVOURITE_PLAYERS_PATH = "data\\favouritePlayers.txt";
+        public const string FAVOURITE_TEAM_PATH = "data\\favouriteTeam.txt";
+        public const string FAVOURITE_PLAYERS_PATH = "data\\favouritePlayers.txt";
         //private const string FAVOURITE_TEAM_PLAYERS_PATH = "data\\favouriteTeamPlayers.txt";
-        private Klasice.Data.Language language;
+        public Klasice.Data.Language language;
         private Klasice.Data.Team tim = null;
         private List<Klasice.Data.Player> players = null;
+        private List<Klasice.Data.Match> matches = null;
         private HttpClient client;
 
         public MainForm(Klasice.Data.Language language, Klasice.Data.Team tim, HttpClient client)
@@ -78,40 +79,49 @@ namespace OOPWindowsFormsApp
 
         private void FillFavouritePlayers()
         {
+            //treba se refactorirat
             string[] lines = File.ReadAllLines(FAVOURITE_PLAYERS_PATH);
-            for (int i = 1; i < lines.Length; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
-                Panel dynamicPanel = new Panel();
-                dynamicPanel.Dock = DockStyle.Top;
-                dynamicPanel.Location = new System.Drawing.Point();
-                dynamicPanel.Size = new System.Drawing.Size(258, 50);
-                dynamicPanel.BackColor = Color.LightBlue;
-                dynamicPanel.BorderStyle = BorderStyle.FixedSingle;
+                Panel dynamicPanel = new Panel
+                {
+                    Dock = DockStyle.Top,
+                    Location = new System.Drawing.Point(),
+                    Size = new System.Drawing.Size(258, 50),
+                    BackColor = Color.LightBlue,
+                    BorderStyle = BorderStyle.FixedSingle
+                };
 
-
-                Panel _playerPanel = new Panel();
-                _playerPanel.Location = new Point(5, 4);
-                _playerPanel.Size = new Size(230, 40);
-                _playerPanel.BackColor = Color.Violet;
-                _playerPanel.Enabled = false;
+                Panel _playerPanel = new Panel
+                {
+                    Location = new Point(5, 4),
+                    Size = new Size(230, 40),
+                    BackColor = Color.Violet,
+                    Enabled = false
+                };
 
                 //nekada odreze dio teksta ako je predugacko ime ¯\_(ツ)_/¯
-                Label _playerLabel = new Label();
-                _playerLabel.Location = new Point(5, 5);
-                _playerLabel.Text = $"{lines[i - 1]}\n{lines[i++]}";
-                _playerLabel.Size = new Size(195, 30);
-                _playerLabel.BackColor = Color.Transparent;
-                _playerLabel.Enabled = true;
-                _playerLabel.ForeColor = Color.Black;
+                Label _playerLabel = new Label
+                {
+                    Location = new Point(5, 5),
+                    Text = $"{lines[i]}",
+                    Size = new Size(195, 30),
+                    BackColor = Color.Transparent,
+                    Enabled = true,
+                    ForeColor = Color.Black
+                };
                 _playerLabel.Paint += _playerLabel_Paint;
+                _playerLabel.Font = new Font(_playerLabel.Font.FontFamily, 12);
                 // _playerLabel.MouseClick += _playerLabel_MouseClick;
 
-                PictureBox _playerIsFavourite = new PictureBox();
-                _playerIsFavourite.Location = new Point(200, 10);
-                _playerIsFavourite.Size = new Size(20, 20);
-                _playerIsFavourite.Image = Properties.Resources.star;
-                _playerIsFavourite.SizeMode = PictureBoxSizeMode.Zoom;
-                _playerIsFavourite.Enabled = false;
+                PictureBox _playerIsFavourite = new PictureBox
+                {
+                    Location = new Point(200, 10),
+                    Size = new Size(20, 20),
+                    Image = Properties.Resources.star,
+                    SizeMode = PictureBoxSizeMode.Zoom,
+                    Enabled = false
+                };
 
                 _playerPanel.Controls.Add(_playerLabel);
                 _playerPanel.Controls.Add(_playerIsFavourite);
@@ -179,7 +189,6 @@ namespace OOPWindowsFormsApp
 
             var child = c.GetNextControl(c, true);
             var grandchild = child.GetNextControl(child, true);
-            igracPanel.Controls.Remove(c);
 
             int i = 0;
             foreach (Control item in omiljeniIgraciPanel.Controls)
@@ -193,6 +202,7 @@ namespace OOPWindowsFormsApp
 
             if (omiljeniIgraciPanel.Controls.Count < 3 && i == 0)
             {
+                igracPanel.Controls.Remove(c);
                 c.Location = omiljeniIgraciPanel.PointToClient(new Point(e.X, e.Y));
                 omiljeniIgraciPanel.Controls.Add(c);
                 child.Controls.Add(_playerIsFavourite);
@@ -210,11 +220,11 @@ namespace OOPWindowsFormsApp
                 switch (language)
                 {
                     case Klasice.Data.Language.English:
-                        MessageBox.Show("Maximum 3 favourite players.");
+                        MessageBox.Show("Maximum 3 favourite players.", "Warning");
                         break;
 
                     case Klasice.Data.Language.Hrvatski:
-                        MessageBox.Show("Maksimalno 3 omiljena igrača.");
+                        MessageBox.Show("Maksimalno 3 omiljena igrača.", "Warning");
                         break;
                 }
             }
@@ -227,13 +237,18 @@ namespace OOPWindowsFormsApp
 
         private static void c_MouseDown(object sender, MouseEventArgs e)
         {
-            Control c = sender as Control;
-            c.DoDragDrop(c, DragDropEffects.Move);
+            if (e.Button == MouseButtons.Left)
+            {
+                Control c = sender as Control;
+                c.DoDragDrop(c, DragDropEffects.Move);
+            }
         }
 
         private void FillPlayerList(Klasice.Data.Team tim)
         {
-            players = Klasice.Utilities.GetPlayers(Klasice.Utilities.GetMatchesByFifaCode(client, tim).Result[0], tim);
+            matches = Klasice.Utilities.GetMatchesByFifaCode(client, tim).Result;
+            players = Klasice.Utilities.GetPlayers(matches[0], tim);
+            players.Sort((x, y) => y.Shirt_Number.CompareTo(x.Shirt_Number));
             foreach (Klasice.Data.Player player in players)
             {
                 igracPanel.Controls.Add(NewPlayerControl(player));
@@ -242,30 +257,37 @@ namespace OOPWindowsFormsApp
 
         private static Control NewPlayerControl(Data.Player player)
         {
-            Panel dynamicPanel = new Panel();
-            dynamicPanel.Dock = DockStyle.Top;
-            dynamicPanel.Location = new System.Drawing.Point();
-            dynamicPanel.Size = new System.Drawing.Size(258, 50);
-            dynamicPanel.BackColor = Color.LightBlue;
-            dynamicPanel.BorderStyle = BorderStyle.FixedSingle;
+            Panel dynamicPanel = new Panel
+            {
+                Dock = DockStyle.Top,
+                Location = new System.Drawing.Point(),
+                Size = new System.Drawing.Size(258, 50),
+                BackColor = Color.LightBlue,
+                BorderStyle = BorderStyle.FixedSingle
+            };
 
 
-            Panel _playerPanel = new Panel();
-            _playerPanel.Location = new Point(5, 4);
-            _playerPanel.Size = new Size(230, 40);
-            _playerPanel.BackColor = Color.Violet;
-            _playerPanel.Enabled = false;
+            Panel _playerPanel = new Panel
+            {
+                Location = new Point(5, 4),
+                Size = new Size(230, 40),
+                BackColor = Color.Violet,
+                Enabled = false
+            };
 
             //nekada odreze dio teksta ako je predugacko ime ¯\_(ツ)_/¯
-            Label _playerLabel = new Label();
-            _playerLabel.Location = new Point(5, 5);
-            _playerLabel.Text = player.ToString();
-            _playerLabel.Size = new Size(195, 30);
-            _playerLabel.BackColor = Color.Transparent;
-            _playerLabel.Enabled = true;
+            Label _playerLabel = new Label
+            {
+                Location = new Point(5, 5),
+                Text = player.ToString(),
+                Size = new Size(195, 30),
+                BackColor = Color.Transparent,
+                Enabled = true,
+                ForeColor = Color.Black
+            };
             _playerLabel.Paint += _playerLabel_Paint;
-            _playerLabel.ForeColor = Color.Black;
-           // _playerLabel.MouseClick += _playerLabel_MouseClick;
+            _playerLabel.Font = new Font(_playerLabel.Font.FontFamily, 12);
+            // _playerLabel.MouseClick += _playerLabel_MouseClick;
 
             _playerPanel.Controls.Add(_playerLabel);
             dynamicPanel.Controls.Add(_playerPanel);
@@ -301,25 +323,26 @@ namespace OOPWindowsFormsApp
             switch (language)
             {
                 case Klasice.Data.Language.English:
-                    MessageBox.Show("Favourite team saved.");
+                    MessageBox.Show("Favourite team saved.", "Info");
                     break;
 
                 case Klasice.Data.Language.Hrvatski:
-                    MessageBox.Show("Spremljen omiljeni tim.");
+                    MessageBox.Show("Spremljen omiljeni tim.", "Info");
                     break;
             }
         }
 
-        private string SetLanguage(Klasice.Data.Language language)
+        public string SetLanguage(Klasice.Data.Language language)
         {
+            this.language = language;
             switch (language)
             {
                 case Klasice.Data.Language.English:
                     return"en";
 
                 case Klasice.Data.Language.Hrvatski:
-                    //iz nekog razloga uporno stavlja tekst na engleski samo za ovaj gumb
-                    confirmFavouriteTeamButton.Text = "Potvrdi omiljenu reprezentaciju."; 
+                    //iz nekog razloga uporno stavlja tekst na engleski samo za teams panelu
+                    confirmFavouriteTeamButton.Text = "Potvrdi omiljenu reprezentaciju.";
                     return "hr";
 
                 default:
@@ -338,7 +361,7 @@ namespace OOPWindowsFormsApp
             }
         }
 
-        private void ChangeLanguage(string lang)
+        public void ChangeLanguage(string lang)
         {
             foreach (Control c in Controls)
             {
@@ -349,7 +372,7 @@ namespace OOPWindowsFormsApp
 
         private void SettingsButton_Click(object sender, EventArgs e)
         {
-            new SettingsForm(language, BackgroundImage).ShowDialog();
+            new SettingsForm(language, BackgroundImage, this).ShowDialog();
         }
 
         //pojma nemam kaj radim
@@ -365,6 +388,34 @@ namespace OOPWindowsFormsApp
             }
             igracPanel.DragOver += new DragEventHandler(igracPanel_DragOver);
             igracPanel.DragDrop += new DragEventHandler(igracPanel_DragDrop);
+        }
+
+        public void ResetBackground()
+        {
+            BackgroundImage = Properties.Resources.DefaultBackgroundImage;
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result;
+            switch (language)
+            {
+                case Klasice.Data.Language.English:
+                    result = MessageBox.Show("Are you sure you want to close the application?", "Close Window", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    break;
+
+                case Klasice.Data.Language.Hrvatski:
+                    result = MessageBox.Show("Jeste li sigurni da želite zatvoriti aplikaciju?", "Close Window", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    break;
+
+                default:
+                    result = DialogResult.No;
+                    break;
+            }
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
