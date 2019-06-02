@@ -6,6 +6,14 @@ Solution je već buildan pod ```\OOPWindowsFormsApp\bin\Debug```.
 
 # Changelog
 
+## v0.51
+- Popravljen bug gdje bi igrač s liste igrača nestao iako se ne bi dodao na listu omiljenih igrača.
+
+- Implementirana forma za postavke.
+  - Moguće promjeniti jezik
+  - Moguće resetirati omiljenu reprezentaciju
+  - Moguće resetirati listu omiljenih igrača
+
 ## v0.46
 - Implementirana kontrola za omiljene igrače.
 
